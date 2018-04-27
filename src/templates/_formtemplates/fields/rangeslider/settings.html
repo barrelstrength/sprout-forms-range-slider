@@ -1,0 +1,34 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    label: "Default Value"|t('sprout-forms-range-slider'),
+    id: 'defaultValue',
+    name: 'defaultValue',
+    value: field.defaultValue
+}) }}
+
+{{ forms.textField({
+    label: "Min Value"|t('sprout-forms-range-slider'),
+    id: 'min',
+    name: 'min',
+    value: field.min,
+    size: 5,
+    errors: field.getErrors('min')
+}) }}
+
+{{ forms.textField({
+    label: "Max Value"|t('sprout-forms-range-slider'),
+    id: 'max',
+    name: 'max',
+    value: field.max,
+    size: 5,
+    errors: field.getErrors('max')
+}) }}
+
+{{ forms.textField({
+    label: "Placeholder Text"|t('sprout-forms-range-slider'),
+    instructions: "The text that will be shown if the field doesn’t have a value."|t('sprout-forms-range-slider'),
+    id: 'placeholder',
+    name: 'placeholder',
+    value: field.placeholder
+}) }}
