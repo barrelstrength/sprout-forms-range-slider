@@ -9,23 +9,26 @@
 {%- set dataAttributes = null %}
 {%- set data = renderingOptions.data ?? null %}
 {%- for key, dataValue in data %}
-{%- set dataAttributes = dataAttributes ~ ' data-'~key~'="'~dataValue~'"' %}
+    {%- set dataAttributes = dataAttributes ~ ' data-'~key~'="'~dataValue~'"' %}
 {%- endfor -%}
 
 {% spaceless %}
 
-    {% set outputId = 'fields-rangevalue-'~field.id %}
+    {% set outputId = 'fields-sproutforms-range-field-value-'~field.id %}
+
     <input type="range"
-        {%- if name %} name="{{ name }}"{% endif %}
-        {%- if id %} id="{{ id }}"{% endif %}
-        {%- if class %} class="{{ class }}"{% endif %}
-        {%- if required %} required aria-required="true"{% endif %}
-        {%- if hasInstructions %} aria-describedby="{{ field.getNamespace() }}-{{ id }}-instructions"{% endif %}
-        {%- if min is not null %} min="{{ min }}"{% endif %}
-        {%- if max is not null %} max="{{ max }}"{% endif %}
-        {%- if value %} value="{{ value }}"{% endif %}
-        {%- if field.placeholder %} title="{{ field.placeholder }}" {% endif %}
-        {{- dataAttributes|raw -}}
-        onchange="document.getElementById('{{ outputId }}').value = value">
-    <output id="rangevalue-{{ field.id }}">{{ field.defaultValue }}</output>
+            {%- if name %} name="{{ name }}"{% endif %}
+            {%- if id %} id="{{ id }}"{% endif %}
+            {%- if class %} class="{{ class }}"{% endif %}
+            {%- if required %} required aria-required="true"{% endif %}
+            {%- if hasInstructions %} aria-describedby="{{ field.getNamespace() }}-{{ id }}-instructions"{% endif %}
+            {%- if min is not null %} min="{{ min }}"{% endif %}
+            {%- if max is not null %} max="{{ max }}"{% endif %}
+            {%- if value %} value="{{ value }}"{% endif %}
+            {%- if field.titleText %} title="{{ field.titleText }}"{% endif %}
+            {{- dataAttributes|raw -}}
+           onchange="document.getElementById('{{ outputId }}').value = value">
+
+    <output id="sproutforms-range-field-value-{{ field.id }}">{{ field.defaultValue }}</output>
+
 {% endspaceless %}

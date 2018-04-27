@@ -1,1 +1,1 @@
-# Sprout Forms Range Slider for Sprout Forms
+# Range Slider Field for Sprout Forms

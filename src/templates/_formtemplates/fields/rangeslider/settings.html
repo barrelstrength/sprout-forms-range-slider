@@ -1,14 +1,6 @@
 {% import "_includes/forms" as forms %}
 
 {{ forms.textField({
-    label: "Default Value"|t('sprout-forms-range-slider'),
-    id: 'defaultValue',
-    name: 'defaultValue',
-    value: field.defaultValue,
-    errors: field.getErrors('defaultValue')
-}) }}
-
-{{ forms.textField({
     label: "Min Value"|t('sprout-forms-range-slider'),
     id: 'min',
     name: 'min',
@@ -27,9 +19,18 @@
 }) }}
 
 {{ forms.textField({
-    label: "Placeholder Text"|t('sprout-forms-range-slider'),
-    instructions: "The text that will be shown if the field doesn’t have a value."|t('sprout-forms-range-slider'),
-    id: 'placeholder',
-    name: 'placeholder',
-    value: field.placeholder
+    label: "Default Value"|t('sprout-forms-range-slider'),
+    id: 'defaultValue',
+    name: 'defaultValue',
+    value: field.defaultValue,
+    size: 5,
+    errors: field.getErrors('defaultValue')
+}) }}
+
+{{ forms.textField({
+    label: "Title Text"|t('sprout-forms-range-slider'),
+    instructions: "The text that will be used as the range input title attribute."|t('sprout-forms-range-slider'),
+    id: 'titleText',
+    name: 'titleText',
+    value: field.titleText
 }) }}

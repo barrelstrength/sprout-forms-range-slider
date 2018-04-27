@@ -40,7 +40,7 @@ class RangeSlider extends BaseFormField implements PreviewableFieldInterface
     /**
      * @var string|null
      */
-    public $placeholder;
+    public $titleText;
 
     /**
      * @inheritdoc
@@ -60,6 +60,8 @@ class RangeSlider extends BaseFormField implements PreviewableFieldInterface
 
     /**
      * @inheritdoc
+     *
+     * @throws \Twig_Error_Loader
      * @throws \yii\base\Exception
      */
     public function getSettingsHtml()
@@ -75,7 +77,9 @@ class RangeSlider extends BaseFormField implements PreviewableFieldInterface
     }
 
     /**
-     * @inheritdoc
+     * @@inheritdoc
+     *
+     * @throws \Twig_Error_Loader
      * @throws \yii\base\Exception
      */
     public function getInputHtml($value, ElementInterface $element = null): string
@@ -91,6 +95,8 @@ class RangeSlider extends BaseFormField implements PreviewableFieldInterface
 
     /**
      * @inheritdoc
+     *
+     * @throws \Twig_Error_Loader
      * @throws \yii\base\Exception
      */
     public function getExampleInputHtml()
@@ -104,12 +110,12 @@ class RangeSlider extends BaseFormField implements PreviewableFieldInterface
 
     /**
      * @inheritdoc
+     *
+     * @throws \Twig_Error_Loader
      * @throws \yii\base\Exception
      */
     public function getFrontEndInputHtml($value, array $renderingOptions = null): string
     {
-        Craft::$app->getView()->registerAssetBundle(RangeSliderAsset::class);
-
         $rendered = Craft::$app->getView()->renderTemplate(
             'rangeslider/input',
             [

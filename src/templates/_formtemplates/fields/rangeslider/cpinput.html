@@ -1,7 +1,14 @@
-{% do view.registerAssetBundle("barrelstrength\\sproutformsrangeslider\\web\\assets\\rangeslider\\RangeSliderAsset") %}
-{% set outputId = 'fields-rangevalue-'~field.id %}
-<div class="slider">
-    <input name = 'fields[{{ field.handle }}]' type="range" min="{{ field.min }}" max="{{ field.max }}" value="{{ value }}"
+{% set outputId = 'fields-sproutforms-range-field-value-'~field.id %}
+
+<div class="sproutforms-range-field-slider">
+    <input name='fields[{{ field.handle }}]'
+           type="range"
+           min="{{ field.min }}"
+           max="{{ field.max }}"
+           value="{{ value }}"
+           title="{{ field.titleText }}"
            onchange="document.getElementById('{{ outputId }}').value = value">
-    <output id="rangevalue-{{ field.id }}">{{ value }}</output>
+    <output id="sproutforms-range-field-value-{{ field.id }}">{{ value }}</output>
 </div>
+
+{% do view.registerAssetBundle("barrelstrength\\sproutformsrangeslider\\web\\assets\\rangeslider\\RangeSliderAsset") %}
