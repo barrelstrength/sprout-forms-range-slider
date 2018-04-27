@@ -2,7 +2,6 @@
 
 namespace barrelstrength\sproutformsrangeslider\integrations\sproutforms\fields;
 
-use barrelstrength\sproutformsrangeslider\web\assets\rangeslider\RangeSliderAsset;
 use Craft;
 use craft\helpers\Template as TemplateHelper;
 use craft\base\ElementInterface;
