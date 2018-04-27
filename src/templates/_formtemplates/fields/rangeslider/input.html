@@ -24,6 +24,7 @@
         {%- if min is not null %} min="{{ min }}"{% endif %}
         {%- if max is not null %} max="{{ max }}"{% endif %}
         {%- if value %} value="{{ value }}"{% endif %}
+        {%- if field.placeholder %} title="{{ field.placeholder }}" {% endif %}
         {{- dataAttributes|raw -}}
         onchange="document.getElementById('{{ outputId }}').value = value">
     <output id="rangevalue-{{ field.id }}">{{ field.defaultValue }}</output>
