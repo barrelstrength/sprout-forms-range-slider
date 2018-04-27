@@ -129,7 +129,7 @@ class RangeSlider extends BaseFormField implements PreviewableFieldInterface
     public function rules()
     {
         $rules = parent::rules();
-        $rules[] = [['min', 'max'], 'number'];
+        $rules[] = [['min', 'max', 'defaultValue'], 'number'];
         $rules[] = [
             ['max'],
             'compare',

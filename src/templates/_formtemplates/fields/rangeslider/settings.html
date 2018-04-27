@@ -4,7 +4,8 @@
     label: "Default Value"|t('sprout-forms-range-slider'),
     id: 'defaultValue',
     name: 'defaultValue',
-    value: field.defaultValue
+    value: field.defaultValue,
+    errors: field.getErrors('defaultValue')
 }) }}
 
 {{ forms.textField({
