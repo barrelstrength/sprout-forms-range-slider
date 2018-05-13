@@ -34,7 +34,6 @@
     "extra": {
         "name": "Range Slider Field for Sprout Forms",
         "handle": "sprout-forms-range-slider",
-        "schemaVersion": "1.0.0",
         "developer": "Barrel Strength",
         "developerUrl": "https://barrelstrengthdesign.com",
         "documentationUrl": "https://github.com/barrelstrength/craft-sprout-forms-range-slider/blob/master/README.md",

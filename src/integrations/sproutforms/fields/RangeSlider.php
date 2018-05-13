@@ -7,14 +7,14 @@ use craft\helpers\Template as TemplateHelper;
 use craft\base\ElementInterface;
 use craft\base\PreviewableFieldInterface;
 
-use barrelstrength\sproutforms\contracts\BaseFormField;
+use barrelstrength\sproutforms\base\FormField;
 
 /**
  * Class RangeSlider
  *
  * @package Craft
  */
-class RangeSlider extends BaseFormField implements PreviewableFieldInterface
+class RangeSlider extends FormField implements PreviewableFieldInterface
 {
     /**
      * @var string
@@ -83,7 +83,7 @@ class RangeSlider extends BaseFormField implements PreviewableFieldInterface
      */
     public function getInputHtml($value, ElementInterface $element = null): string
     {
-        return Craft::$app->getView()->renderTemplate('sprout-forms-range-slider/_formtemplates/fields/rangeslider/cpinput',
+        return Craft::$app->getView()->renderTemplate('sprout-forms-range-slider/_integrations/sproutforms/formtemplates/fields/rangeslider/cpinput',
             [
                 'name' => $this->handle,
                 'value' => $value ?? $this->defaultValue,
@@ -100,7 +100,7 @@ class RangeSlider extends BaseFormField implements PreviewableFieldInterface
      */
     public function getExampleInputHtml()
     {
-        return Craft::$app->getView()->renderTemplate('sprout-forms-range-slider/_formtemplates/fields/rangeslider/example',
+        return Craft::$app->getView()->renderTemplate('sprout-forms-range-slider/_integrations/sproutforms/formtemplates/fields/rangeslider/example',
             [
                 'field' => $this
             ]
@@ -150,6 +150,6 @@ class RangeSlider extends BaseFormField implements PreviewableFieldInterface
      */
     public function getTemplatesPath()
     {
-        return Craft::getAlias('@barrelstrength/sproutformsrangeslider/templates/_formtemplates/fields/');
+        return Craft::getAlias('@barrelstrength/sproutformsrangeslider/templates/_integrations/sproutforms/formtemplates/fields/');
     }
 }
