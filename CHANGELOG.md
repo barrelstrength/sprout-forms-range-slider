@@ -1,5 +1,10 @@
 # Range Slider Field for Sprout Forms Changelog
 
+## 1.0.4 - 2018-05-18
+
+### Fixed
+- Fixed field settings path 
+
 ## 1.0.3 - 2018-05-15
 
 ### Changed
