@@ -66,7 +66,7 @@ class RangeSlider extends FormField implements PreviewableFieldInterface
     public function getSettingsHtml()
     {
         $rendered = Craft::$app->getView()->renderTemplate(
-            'sprout-forms-range-slider/_formtemplates/fields/rangeslider/settings',
+            'sprout-forms-range-slider/_integrations/sproutforms/formtemplates/fields/rangeslider/settings',
             [
                 'field' => $this
             ]
