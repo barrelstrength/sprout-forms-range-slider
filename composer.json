@@ -2,7 +2,7 @@
     "name": "barrelstrength/sprout-forms-range-slider",
     "description": "Range Slider Field for Sprout Forms",
     "type": "craft-plugin",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "keywords": [
         "craft",
         "cms",
@@ -24,7 +24,7 @@
     ],
     "require": {
         "craftcms/cms": "^3.0.0",
-        "barrelstrength/sprout-forms": "^3.0.0-beta.11"
+        "barrelstrength/sprout-forms": "^3.0.0-beta.47"
     },
     "autoload": {
         "psr-4": {
