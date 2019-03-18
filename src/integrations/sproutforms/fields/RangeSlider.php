@@ -52,7 +52,7 @@ class RangeSlider extends FormField implements PreviewableFieldInterface
     /**
      * @return string
      */
-    public function getSvgIconPath()
+    public function getSvgIconPath(): string
     {
         return '@sproutformsrangeslidericons/slider.svg';
     }
@@ -98,7 +98,7 @@ class RangeSlider extends FormField implements PreviewableFieldInterface
      * @throws \Twig_Error_Loader
      * @throws \yii\base\Exception
      */
-    public function getExampleInputHtml()
+    public function getExampleInputHtml(): string
     {
         return Craft::$app->getView()->renderTemplate('sprout-forms-range-slider/_integrations/sproutforms/formtemplates/fields/rangeslider/example',
             [
@@ -113,7 +113,7 @@ class RangeSlider extends FormField implements PreviewableFieldInterface
      * @throws \Twig_Error_Loader
      * @throws \yii\base\Exception
      */
-    public function getFrontEndInputHtml($value, array $renderingOptions = null): string
+    public function getFrontEndInputHtml($value, array $renderingOptions = null): \Twig_Markup
     {
         $rendered = Craft::$app->getView()->renderTemplate(
             'rangeslider/input',
@@ -148,7 +148,7 @@ class RangeSlider extends FormField implements PreviewableFieldInterface
     /**
      * @inheritdoc
      */
-    public function getTemplatesPath()
+    public function getTemplatesPath(): string
     {
         return Craft::getAlias('@barrelstrength/sproutformsrangeslider/templates/_integrations/sproutforms/formtemplates/fields/');
     }
