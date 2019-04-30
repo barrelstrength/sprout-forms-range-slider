@@ -8,11 +8,16 @@ use craft\base\ElementInterface;
 use craft\base\PreviewableFieldInterface;
 
 use barrelstrength\sproutforms\base\FormField;
+use Twig_Error_Loader;
+use Twig_Markup as Twig_MarkupAlias;
+use yii\base\Exception;
 
 /**
  * Class RangeSlider
  *
  * @package Craft
+ *
+ * @property mixed $settingsHtml
  */
 class RangeSlider extends FormField implements PreviewableFieldInterface
 {
@@ -60,8 +65,8 @@ class RangeSlider extends FormField implements PreviewableFieldInterface
     /**
      * @inheritdoc
      *
-     * @throws \Twig_Error_Loader
-     * @throws \yii\base\Exception
+     * @throws Twig_Error_Loader
+     * @throws Exception
      */
     public function getSettingsHtml()
     {
@@ -78,8 +83,8 @@ class RangeSlider extends FormField implements PreviewableFieldInterface
     /**
      * @@inheritdoc
      *
-     * @throws \Twig_Error_Loader
-     * @throws \yii\base\Exception
+     * @throws Twig_Error_Loader
+     * @throws Exception
      */
     public function getInputHtml($value, ElementInterface $element = null): string
     {
@@ -95,8 +100,8 @@ class RangeSlider extends FormField implements PreviewableFieldInterface
     /**
      * @inheritdoc
      *
-     * @throws \Twig_Error_Loader
-     * @throws \yii\base\Exception
+     * @throws Twig_Error_Loader
+     * @throws Exception
      */
     public function getExampleInputHtml(): string
     {
@@ -110,10 +115,10 @@ class RangeSlider extends FormField implements PreviewableFieldInterface
     /**
      * @inheritdoc
      *
-     * @throws \Twig_Error_Loader
-     * @throws \yii\base\Exception
+     * @throws Twig_Error_Loader
+     * @throws Exception
      */
-    public function getFrontEndInputHtml($value, array $renderingOptions = null): \Twig_Markup
+    public function getFrontEndInputHtml($value, array $renderingOptions = null): Twig_MarkupAlias
     {
         $rendered = Craft::$app->getView()->renderTemplate(
             'rangeslider/input',
