@@ -12,8 +12,11 @@
         "range"
     ],
     "support": {
-        "docs": "https://github.com/barrelstrength/craft-sprout-forms-range-slider/blob/master/README.md",
-        "issues": "https://github.com/barrelstrength/craft-sprout-forms-range-slider/issues"
+        "email": "sprout@barrelstrengthdesign.com",
+        "issues": "https://github.com/barrelstrength/craft-sprout-forms-range-slider/issues?state=open",
+        "source": "https://github.com/barrelstrength/craft-sprout-forms-range-slider",
+        "docs": "https://sprout.barrelstrengthdesign.com/docs/forms",
+        "rss": "https://github.com/barrelstrength/craft-sprout-forms-range-slider/commits/v2.atom"
     },
     "license": "MIT",
     "authors": [
@@ -35,10 +38,7 @@
         "name": "Range Slider Field for Sprout Forms",
         "handle": "sprout-forms-range-slider",
         "developer": "Barrel Strength",
-        "developerUrl": "https://barrelstrengthdesign.com",
-        "documentationUrl": "https://github.com/barrelstrength/craft-sprout-forms-range-slider/blob/master/README.md",
-        "changelogUrl": "https://github.com/barrelstrength/craft-sprout-forms-range-slider/blob/master/CHANGELOG.md",
-        "downloadUrl": "https://github.com/barrelstrength/craft-sprout-forms-range-slider/archive/master.zip",
+        "documentationUrl": "https://sprout.barrelstrengthdesign.com/docs/forms",
         "class": "barrelstrength\\sproutformsrangeslider\\SproutFormsRangeSlider"
     }
 }
