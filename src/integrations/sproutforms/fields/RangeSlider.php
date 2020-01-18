@@ -134,11 +134,12 @@ class RangeSlider extends FormField implements PreviewableFieldInterface
     }
 
     /**
-     * @inheritdoc
+     * @return array
      */
-    public function rules()
+    public function defineRules(): array
     {
-        $rules = parent::rules();
+        $rules = parent::defineRules();
+
         $rules[] = [['min', 'max', 'defaultValue'], 'number'];
         $rules[] = [
             ['max'],
