@@ -2,6 +2,7 @@
 
 namespace barrelstrength\sproutformsrangeslider\integrations\sproutforms\fields;
 
+use barrelstrength\sproutforms\elements\Entry;
 use Craft;
 use craft\helpers\Template as TemplateHelper;
 use craft\base\ElementInterface;
@@ -118,7 +119,7 @@ class RangeSlider extends FormField implements PreviewableFieldInterface
      * @throws Twig_Error_Loader
      * @throws Exception
      */
-    public function getFrontEndInputHtml($value, array $renderingOptions = null): Twig_MarkupAlias
+    public function getFrontEndInputHtml($value, Entry $entry, array $renderingOptions = null): Twig_MarkupAlias
     {
         $rendered = Craft::$app->getView()->renderTemplate(
             'rangeslider/input',
@@ -126,6 +127,7 @@ class RangeSlider extends FormField implements PreviewableFieldInterface
                 'name' => $this->handle,
                 'value' => $value ?? $this->defaultValue,
                 'field' => $this,
+                'entry' => $entry,
                 'renderingOptions' => $renderingOptions
             ]
         );
