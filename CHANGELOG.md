@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0 - 2020-05-25
+
+### Changed
+- Improved rendering options support
+- Updated barrelstrength/sprout-forms requirement v3.12.0
+
 ## 1.0.6 - 2019-04-30
 
 ### Changed
